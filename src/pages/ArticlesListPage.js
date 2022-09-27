@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import articles from "./article-content"
 import ArticleList from "../components/ArticleList"
 const ArticlesListPage = () => {
