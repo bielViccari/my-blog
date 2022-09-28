@@ -6,7 +6,7 @@ import NotFoundPage from "./NotFoundPage";
 import CommentsList from "../components/CommentsList";
 
 const ArticlePage = () => {
-
+    const [disable, setDisable] = useState(false);
     const [articleInfo, setArticleInfo] = useState({upvotes: 0, comments : []})
     const { articleId } = useParams();
    
@@ -21,6 +21,14 @@ const ArticlePage = () => {
 
     const article = articles.find(article => article.name === articleId)
    
+    const addUpvote = async() => 
+    {
+        const response = await axios.put(`/api/articles/${articleId}/upvote`)
+        const updateArticle = response.data
+        setArticleInfo(updateArticle)
+        setDisable(true)
+    }
+
     if (!article) {
        return <NotFoundPage />
     }
@@ -28,7 +36,10 @@ const ArticlePage = () => {
     return(
         <>
         <h1>{article.title}</h1>
-        <p>This article has {articleInfo.upvotes} upvotes !!!</p>
+        <div className="upvotes-section">
+           <button onClick={addUpvote} disabled={disable}>Upvote</button>
+           <p> This article has {articleInfo.upvotes} upvotes !!!</p>
+        </div>
         {article.content.map((paragraph, i) => (
             <p key={i}>{paragraph}</p>
         ))} 

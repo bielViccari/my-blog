@@ -1,31 +1,21 @@
+import image from "../imgs/gamesJpeg.jpg"
+
 const AboutPage = () => {
+    
     return (
       <>
-        <h1>About me</h1>
+        <h1>Sobre</h1>
+        <img src={image} alt="ImageBanner" width="680px" height="400px" />
     <p>
-        Welcome to my blog! Proin congue
-        ligula id risus posuere, vel eleifend ex egestas. Sed in turpis leo. 
-        Aliquam malesuada in massa tincidunt egestas. Nam consectetur varius turpis, 
-        non porta arcu porttitor non. In tincidunt vulputate nulla quis egestas. Ut 
-        eleifend ut ipsum non fringilla. Praesent imperdiet nulla nec est luctus, at 
-        sodales purus euismod.
+        Me chamo Gabriel Viccari de Almeida, 
+        atualmente tenho 18 anos e sou técnico em 
+        análise e desenvolvimento de sistemas.
+        Curso faculdade tambem de análise e desenvolvimento 
+        de sistemas, pela Fatec.
+        Sou apaixonado por programação e por games, por isso
+         decidi juntar o utíl ao agradável, criando esse website.  
     </p>
-    <p>
-        Donec vel mauris lectus. Etiam nec lectus urna. Sed sodales ultrices dapibus. 
-        Nam blandit tristique risus, eget accumsan nisl interdum eu. Aenean ac accumsan 
-        nisi. Nunc vel pulvinar diam. Nam eleifend egestas viverra. Donec finibus lectus 
-        sed lorem ultricies, eget ornare leo luctus. Morbi vehicula, nulla eu tempor 
-        interdum, nibh elit congue tellus, ac vulputate urna lorem nec nisi. Morbi id 
-        consequat quam. Vivamus accumsan dui in facilisis aliquet.,
-    </p>
-    <p>
-        Etiam nec lectus urna. Sed sodales ultrices dapibus. 
-        Nam blandit tristique risus, eget accumsan nisl interdum eu. Aenean ac accumsan 
-        nisi. Nunc vel pulvinar diam. Nam eleifend egestas viverra. Donec finibus lectus 
-        sed lorem ultricies, eget ornare leo luctus. Morbi vehicula, nulla eu tempor 
-        interdum, nibh elit congue tellus, ac vulputate urna lorem nec nisi. Morbi id 
-        consequat quam. Vivamus accumsan dui in facilisis aliquet.,
-    </p>
+    
     </>
     )
 }
